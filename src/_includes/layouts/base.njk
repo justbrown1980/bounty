@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+  <meta name="author" content="Justin Brown">
+
+  <title>{{ renderData.title or title or metadata.title }}</title>
+
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body class="font-sans border-box antialiased mx-4 md:mx-0" id="top" itemscope itemtype="http://schema.org/WebPage">
+  
+  {{ content | safe }}
+  
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
